@@ -4,8 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
-@CucumberOptions(
-        plugin = {"summary", "json:target/cucumber-report.json"},
+@CucumberOptions(plugin = {"pretty", "html:target/cucumber/cucumber.html"},
         features = {"classpath:cucumber/testng/features"}
 )
 public class RunCucumberTest extends AbstractTestNGCucumberTests {
